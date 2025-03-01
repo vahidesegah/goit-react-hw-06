@@ -1,0 +1,232 @@
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary-transparent), var(--secondary-transparent), var(--primary-transparent));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-dark);
+    background-color: rgba(238, 238, 238, 0.9);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-primary);
+}
+
+.number {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-primary);
+}
+
+.icon {
+    margin-right: 8px;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: color 0.4s ease, box-shadow 0.3s ease;
+    letter-spacing: 1px;
+    z-index: 1;
+    margin-top: 0;
+    box-shadow: var(--shadow-light);
+    white-space: nowrap;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--space-transparent));
+    transition: left 0.5s ease-out;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: #ffffff;
+    box-shadow: var(--shadow-dark);
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.btn .icon {
+    margin-left: 0;
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* Responsive Tasarım (Mobile First) */
+
+/* Tüm ekranlar için ortak stiller */
+.contact {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.name {
+    font-size: 1.2rem;
+}
+
+.number {
+    font-size: 1.1rem;
+}
+
+.icon {
+    font-size: 1.1rem;
+}
+
+/* Telefon ve üstü (576px) */
+@media (min-width: 576px) {
+    .contact {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        justify-content: space-between;
+        /* Eklendi */
+    }
+
+    .info {
+        margin-bottom: 0;
+        align-items: flex-start;
+    }
+
+    .btn {
+        width: auto;
+        padding: 10px 16px;
+    }
+
+    .name {
+        font-size: 1.3rem;
+    }
+
+    .number {
+        font-size: 1.2rem;
+    }
+
+    .icon {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablet ve üstü (768px) */
+@media (min-width: 768px) {
+    .contact {
+        padding: 20px;
+        /* Eklendi */
+    }
+
+    .name {
+        font-size: 1.4rem;
+        /* Eklendi */
+    }
+
+    .number {
+        font-size: 1.3rem;
+        /* Eklendi */
+    }
+
+    .icon {
+        font-size: 1.4rem;
+        /* Eklendi */
+    }
+
+    .btn {
+        padding: 12px 20px;
+        /* Eklendi */
+        font-size: 1.1rem;
+        /* Eklendi */
+    }
+}
+
+/* Masaüstü ve üstü (992px) */
+@media (min-width: 992px) {
+    .contact {
+        padding: 25px;
+        /* Eklendi */
+    }
+
+    .name {
+        font-size: 1.5rem;
+        /* Eklendi */
+    }
+
+    .number {
+        font-size: 1.4rem;
+        /* Eklendi */
+    }
+
+    .icon {
+        font-size: 1.5rem;
+        /* Eklendi */
+    }
+
+    .btn {
+        padding: 14px 24px;
+        /* Eklendi */
+        font-size: 1.2rem;
+        /* Eklendi */
+    }
+}

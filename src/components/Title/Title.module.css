@@ -1,0 +1,119 @@
+.section{
+    margin-top:50px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: var(--text-dark);
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
+    padding: 30px 0;
+    font-family: var(--font-title);
+    position: relative;
+    z-index: 1;
+}
+
+.title:hover {
+    transform: scale(1.1);
+    color: var(--teal-transparent);
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+h1::after {
+    content: '';
+    display: block;
+    position: relative;
+    bottom: -50px;
+    width: 1000px;
+    height: 2px;
+    background: var(--text-dark);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+h1:hover::after {
+    background: var(--teal-transparent);
+}
+
+.animation {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    /* Başlangıç konumu: ekranın ortası */
+    left: 25%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    /* Tamamen ortala */
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 30px;
+        letter-spacing: 3px;
+        padding: 20px 0;
+    }
+
+    h1::after {
+        width: 90%;
+        bottom: -30px;
+    }
+
+    .animation {
+        height: 150px;
+        width: 150px;
+        /* Tablet ve altında farklı bir konum */
+        left: 25%;
+        /* Ekranın sol çeyreğinde */
+        top: 75%;
+        /* Ekranın alt çeyreğinde */
+        transform: translate(-50%, -50%);
+        /* Ortalamayı koru */
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    h1::after {
+        width: 80%;
+        bottom: -20px;
+    }
+
+    .animation {
+        height: 100px;
+        width: 100px;
+        /* Telefonlarda farklı bir konum */
+        left: 50%;
+        /* Ortada */
+        top: -20%;
+        /* Neredeyse en altta */
+        transform: translate(-50%, -50%);
+        /* Ortalamayı koru */
+    }
+}

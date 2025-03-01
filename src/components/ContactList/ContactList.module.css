@@ -1,0 +1,102 @@
+.container{
+    margin: 0 auto;
+    width: 100%;
+}
+.contactListContainer {
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--primary-transparent), var(--secondary-transparent), var(--primary-transparent));
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+}
+
+.contactListTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--black-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: var(--font-title);
+}
+
+.contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contactListItem {
+    margin-bottom: 1rem;
+}
+
+.noContactsMessage {
+    font-size: 1.2rem;
+    color: var(--grey-color);
+    text-align: center;
+    margin-top: 1.5rem;
+    font-family: var(--font-primary);
+}
+
+/* Responsive Design (Mobile First) */
+
+@media (max-width: 768px) {
+    .contactListContainer {
+        padding: 1.5rem;
+        /* Küçük ekranlar için padding azaltıldı */
+        max-width: 95%;
+        /* Daha küçük ekranlarda daha fazla genişlik */
+    }
+
+    .contactListTitle {
+        font-size: 1.6rem;
+        /* Küçük ekranlar için başlık boyutu küçültüldü */
+        margin-bottom: 1rem;
+    }
+
+    .contactListItem {
+        font-size: 1rem;
+        /* Küçük ekranlarda font büyüklüğü azaldı */
+    }
+
+    .noContactsMessage {
+        font-size: 1rem;
+        /* Küçük ekranlarda mesaj font boyutu küçültüldü */
+    }
+}
+
+@media (min-width: 768px) {
+    .contactListContainer {
+        padding: 2rem;
+        max-width: 600px;
+    }
+
+    .contactListTitle {
+        font-size: 1.8rem;
+    }
+
+    .contactListItem {
+        font-size: 1.1rem;
+    }
+
+    .noContactsMessage {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contactListContainer {
+        max-width: 800px;
+    }
+
+    .contactListTitle {
+        font-size: 2rem;
+    }
+
+    .contactListItem {
+        font-size: 1.2rem;
+    }
+
+    .noContactsMessage {
+        font-size: 1.2rem;
+    }
+}

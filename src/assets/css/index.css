@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Macondo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  /* Temel Renkler */
+  --primary-color: rgb(39, 55, 77);
+  /* Ana renk */
+  --secondary-color: rgb(82, 109, 130);
+  /* İkinci renk */
+  --accent-color: rgb(157, 178, 191);
+  /* Vurgu rengi */
+  --light-color: rgb(221, 230, 237);
+  /* Açık renk */
+
+  /* Opak Tonlar (Yumuşak Geçişler için) */
+  --primary-transparent: rgba(39, 55, 77, 0.8);
+  --secondary-transparent: rgba(82, 109, 130, 0.8);
+  --accent-transparent: rgba(157, 178, 191, 0.8);
+  --light-transparent: rgba(221, 230, 237, 0.8);
+
+  /* Tema Renkleri */
+  --bg-light: var(--light-color);
+  --text-light: var(--primary-color);
+  --primary-light: var(--accent-color);
+  --secondary-light: var(--secondary-color);
+
+  --bg-dark: var(--primary-color);
+  --text-dark: var(--light-color);
+  --primary-dark: var(--accent-color);
+  --secondary-dark: var(--secondary-color);
+
+  /* Border & Shadow */
+  --border-light: rgba(0, 0, 0, 0.1);
+  --border-dark: rgba(255, 255, 255, 0.1);
+  --shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0px 4px 6px rgba(255, 255, 255, 0.1);
+
+  /* Geçişler ve Animasyonlar */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-slow: 0.4s ease-in-out;
+
+  /* Font Ailesi */
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --font-accent: 'Dancing Script', cursive;
+  --font-title: 'Oswald', sans-serif;
+  --font-unique: 'Macondo', cursive;
+}
+
+/* Genel Stil */
+body {
+  background: linear-gradient(to right,
+      var(--primary-transparent),
+      var(--secondary-transparent),
+      var(--accent-transparent));
+  color: var(--text-light);
+  font-family: var(--font-primary);
+  transition: var(--transition-slow);
+  margin: 0 auto;
+}
