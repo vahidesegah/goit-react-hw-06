@@ -5,10 +5,8 @@ const loadContacts = () => {
   try {
     const savedContacts = localStorage.getItem("contacts");
     if (savedContacts) {
-      // Kontrolü düzelt: savedContacts var mı diye bak
       const parsedContacts = JSON.parse(savedContacts);
       if (Array.isArray(parsedContacts)) {
-        // parsedContacts'ın bir array olup olmadığını kontrol et
         return parsedContacts;
       } else {
         console.warn(
@@ -21,8 +19,7 @@ const loadContacts = () => {
   }
 
   return [
-    // Varsayılan veriler
-    { id: nanoid(), name: "Gökhan Karaduman", phone: "4240000000" },
+    { id: nanoid(), name: "Ayse Fatma", phone: "5360000000" },
     { id: nanoid(), name: "Hermione Kline", phone: "4242368757" },
     { id: nanoid(), name: "Eden Clements", phone: "4242368758" },
     { id: nanoid(), name: "Annie Copeland", phone: "4242368759" },
